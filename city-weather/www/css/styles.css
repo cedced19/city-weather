@@ -1,0 +1,390 @@
+﻿html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+border:0;
+font:inherit;
+font-size:100%;
+vertical-align:baseline;
+margin:0;
+padding:0;
+}
+
+html {
+line-height:1;
+}
+
+ol,ul {
+list-style:none;
+}
+
+table {
+border-collapse:collapse;
+border-spacing:0;
+}
+
+caption,th,td {
+text-align:left;
+font-weight:400;
+vertical-align:middle;
+}
+
+q,blockquote {
+quotes:none;
+}
+
+q:before,q:after,blockquote:before,blockquote:after {
+content:none;
+}
+
+a img {
+border:none;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {
+display:block;
+}
+
+* {
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+outline:none;
+}
+
+a {
+color:#11a7ab;
+font-weight:700;
+text-decoration:none;
+}
+
+input,textarea {
+border:none;
+-webkit-appearance:none;
+-webkit-border-radius:0;
+-moz-border-radius:0;
+-ms-border-radius:0;
+-o-border-radius:0;
+border-radius:0;
+}
+
+body {
+color:#8f99b7;
+font-family:Ubuntu;
+font-size:16px;
+background-color:#1f253d;
+}
+
+h1 {
+font-size:28px;
+text-align:center;
+color:#fff;
+font-weight:700;
+display:none;
+margin:45px 0;
+}
+
+p {
+overflow:hidden;
+zoom:1;
+line-height:24px;
+margin:1em 0;
+}
+
+.chapo {
+font-weight:700;
+}
+
+label {
+display:block;
+margin-bottom:5px;
+}
+
+input.text,textarea.text {
+display:block;
+width:100%;
+height:48px;
+border:1px solid #1f253d;
+background-color:#4f597b;
+color:#fff;
+font-size:16px;
+padding-left:10px;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+-ms-border-radius:4px;
+-o-border-radius:4px;
+border-radius:4px;
+-webkit-background-clip:padding;
+-moz-background-clip:padding;
+background-clip:padding-box;
+-webkit-transition-duration:.3s;
+-moz-transition-duration:.3s;
+-o-transition-duration:.3s;
+transition-duration:.3s;
+}
+
+input.text:focus,textarea.text:focus {
+border:1px solid #11a7ab;
+}
+
+textarea.text {
+height:150px;
+padding-top:15px;
+}
+
+input.submit,.btn {
+display:inline-block;
+height:50px;
+line-height:50px;
+border:none;
+text-transform:uppercase;
+text-align:center;
+font-size:16px;
+color:#fff;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+-ms-border-radius:4px;
+-o-border-radius:4px;
+border-radius:4px;
+-webkit-background-clip:padding;
+-moz-background-clip:padding;
+background-clip:padding-box;
+background-color:#e54b65;
+float:right;
+text-decoration:none;
+cursor:pointer;
+padding:0 5px;
+}
+
+.btn {
+background-color:#11a7ab;
+float:left;
+cursor:pointer;
+font-weight:400;
+}
+
+.back {
+display:block;
+position:absolute;
+top:-60px;
+left:0;
+color:#fff;
+z-index:10;
+width:60px;
+height:60px;
+line-height:60px;
+font-size:35px;
+margin-left:6px;
+cursor:pointer;
+}
+
+.loader {
+background:url(../img/loader.gif) center center no-repeat rgba(57,66,100,0.6);
+z-index:500;
+}
+
+.row-title {
+height:60px;
+line-height:60px;
+text-transform:uppercase;
+background-color:#cb314b;
+-webkit-background-clip:padding;
+-moz-background-clip:padding;
+background-clip:padding-box;
+color:#fff;
+font-size:18px;
+text-align:center;
+font-weight:700;
+}
+
+.row {
+height:60px;
+line-height:60px;
+overflow:hidden;
+background-color:#4f597b;
+border-bottom:1px solid #1f253d;
+color:#fff;
+}
+
+.row .temperature {
+text-align:right;
+padding-right:20px;
+font-size:22px;
+float:right;
+margin-left:40px;
+}
+
+.row .date {
+float:right;
+color:#1f253d;
+text-transform:uppercase;
+font-weight:700;
+}
+
+.row .date strong {
+color:#fff;
+margin-right:5px;
+}
+
+.row span {
+float:left;
+padding-left:20px;
+font-size:35px;
+height:60px;
+line-height:60px;
+margin-right:30px;
+}
+
+.row.row_active {
+height:120px;
+background-color:#e54b65;
+}
+
+.row.row_active .date {
+color:#fff;
+float:left;
+line-height:120px;
+}
+
+.row.row_active .temperature {
+font-size:40px;
+float:left;
+line-height:120px;
+margin-left:15px;
+}
+
+.row.row_active span {
+float:right;
+font-size:50px;
+height:120px;
+line-height:120px;
+margin-right: 20px;
+}
+
+.header {
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:60px;
+line-height:60px;
+color:#fff;
+text-transform:uppercase;
+text-align:center;
+background-color:#11a7ab;
+}
+
+.view {
+position:absolute;
+top:60px;
+right:0;
+left:0;
+bottom:0;
+}
+
+.error {
+color:#e54b65;
+}
+
+.panel,.loader {
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+overflow-x:hidden;
+overflow-y:scroll;
+-webkit-overflow-scrolling:touch;
+-webkit-transition-duration:.5s;
+-moz-transition-duration:.5s;
+-o-transition-duration:.5s;
+transition-duration:.5s;
+}
+
+.panel-padding {
+padding:25px;
+}
+
+@font-face {
+font-family:icomoon;
+src:url(../fonts/icomoon.eot?#iefix-6ervqg) format(embedded-opentype),url(../fonts/icomoon.woff?-6ervqg) format(woff),url(../fonts/icomoon.ttf?-6ervqg) format(truetype),url(../fonts/icomoon.svg?-6ervqg#icomoon) format(svg);
+font-weight:400;
+font-style:normal;
+}
+
+[class^="icon-"],[class*="icon-"] {
+font-family:icomoon;
+speak:none;
+font-style:normal;
+font-weight:400;
+font-variant:normal;
+text-transform:none;
+line-height:1;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
+
+.icon-home:before {
+content:"\e60a";
+}
+
+.icon-earth:before {
+content:"\e60b";
+}
+
+.icon-spinner:before {
+content:"\e60c";
+}
+
+.icon-arrow-left:before {
+content:"\e60d";
+}
+
+.icon-sun:before,.icon-clear:before {
+content:"\e60e";
+}
+
+.icon-cloudy:before {
+content:"\e60f";
+}
+
+.icon-rain:before {
+content:"\e610";
+}
+
+.icon-clouds:before {
+content:"\e611";
+}
+
+.icon-snow:before {
+content:"\e612";
+}
+
+.icon-weather:before {
+content:"\e613";
+}
+
+.icon-storm:before {
+content:"\e614";
+}
+
+.icon-snowy2:before {
+content:"\e615";
+}
+
+.icon-envelope:before {
+content:"\e616";
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu'), url(../fonts/ubuntu-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu'), url(../fonts/ubuntu-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}

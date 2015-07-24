@@ -1,0 +1,17 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "package.appxmanifest": {
+                "parents": {
+                    "/Package/Capabilities": []
+                }
+            }
+        }
+    },
+    "installed_plugins": {},
+    "dependent_plugins": {}
+}

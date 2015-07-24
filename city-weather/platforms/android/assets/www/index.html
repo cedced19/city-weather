@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>City Weather</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body ng-app="CityWeather" ng-controller="CityWeatherCtrl">
+    <header class="header">
+        City Weather
+    </header> 
+
+    <section class="view">
+
+
+            <div class="loader" ng-show="loader"></div>
+            <a class="back" ng-hide="panel==0" ng-click="panel=0"><span class="icon-arrow-left"></span></a>
+
+            <section class="panel panel-padding" ng-hide="panel==1">
+
+                <p>Welcome on my weather application!</p>
+                
+                <p ng-show="error" class="error">Not found!</p>
+
+                <form ng-submit="search()">
+                    <p>
+                        <input type="text" class="text" placeholder="Search city" ng-model="city">
+                    </p>
+
+                    <p>
+                        <input type="submit" class="submit" value="Search" />
+                    </p>
+                </form>
+            </section>
+
+
+
+            <section class="panel right" ng-hide="panel==0">
+
+                <div class="row-title">
+                    {{weather.city.name}}/{{weather.city.country}}
+                </div>
+
+
+                <div class="row" ng-class="{row_active: $index==0}" ng-repeat="day in weather.list" ng-click="expand($event)">
+                    <div class="temperature">{{Math.round(day.temp.day)}} °C</div>
+                    <div class="date">
+                        <strong>{{day.dt*1000 | date:'EEE'}}</strong>
+                        {{day.dt*1000 | date:'dd/MM'}}
+                    </div>
+                    <span class="icon-{{day.weather.0.main.toLowerCase()}}"></span>
+                </div>
+            </section>
+    </section>
+
+    <script src="cordova.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-local.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
