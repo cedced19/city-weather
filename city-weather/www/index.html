@@ -3,8 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>City Weather</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 <body ng-app="CityWeather" ng-controller="CityWeatherCtrl">
     <header class="header">
@@ -15,9 +14,9 @@
 
 
             <div class="loader" ng-show="loader"></div>
-            <a class="back" ng-hide="panel==0" ng-click="panel=0"><span class="icon-arrow-left"></span></a>
+            <a class="back animated rollIn" ng-hide="!panel" ng-click="panel=false"><span class="icon-arrow-left"></span></a>
 
-            <section class="panel panel-padding" ng-hide="panel==1">
+            <section class="panel panel-padding" ng-hide="panel">
 
                 <p>Welcome on my weather application!</p>
                 
@@ -36,7 +35,7 @@
 
 
 
-            <section class="panel right" ng-hide="panel==0">
+            <section class="panel" ng-hide="!panel">
 
                 <div class="row-title">
                     {{weather.city.name}}/{{weather.city.country}}
@@ -49,7 +48,7 @@
                         <strong>{{day.dt*1000 | date:'EEE'}}</strong>
                         {{day.dt*1000 | date:'dd/MM'}}
                     </div>
-                    <span class="icon-{{day.weather.0.main.toLowerCase()}}"></span>
+                    <span class="icon-{{day.weather[0].main.toLowerCase()}}"></span>
                 </div>
             </section>
     </section>
