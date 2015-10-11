@@ -3,7 +3,7 @@
         $scope.panel = false;
 
         $scope.search = function () {
-            var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + $scope.city + "&mode=json&units=metric&cnt=10";
+            var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + $scope.city + "&mode=json&units=metric&cnt=10&appid=13ccf3475608870d407b43ca09bc032f";
             $scope.loader = true;
             $http.get(url).success(function (response) {
                 $scope.panel = true;

@@ -4,13 +4,7 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {
-            "package.appxmanifest": {
-                "parents": {
-                    "/Package/Capabilities": []
-                }
-            }
-        }
+        "files": {}
     },
     "installed_plugins": {},
     "dependent_plugins": {}

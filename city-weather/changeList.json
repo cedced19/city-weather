@@ -23,6 +23,7 @@
     "www\\index.html",
     "res\\screens\\android\\screen-ldpi-portrait.png",
     "res\\native\\android\\ant.properties",
+    "LICENSE",
     "taco.json",
     "res\\icons\\android\\icon-36-ldpi.png",
     "merges\\windows\\scripts\\platformOverrides.js",
@@ -35,14 +36,7 @@
     "res\\screens\\android\\screen-mdpi-portrait.png",
     "config.xml"
   ],
-  "deletedFilesIos": [
-    "www\\js\\img\\loader.gif",
-    "www\\js\\img\\GitHub.VisualStudio.vsix",
-    "www\\img\\loader.gif",
-    "www\\img\\GitHub.VisualStudio.vsix",
-    "www\\css\\animate.css",
-    "www\\js\\angular-animate.min.js"
-  ],
+  "deletedFilesIos": [],
   "addedPluginsIos": [],
   "deletedPluginsIos": [],
   "changedFiles": [],
